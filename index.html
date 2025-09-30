@@ -67,29 +67,34 @@
             box-shadow: 0 4px #d14a4a;
         }
 
-         /* Animasi deskripsi */
+        .deskripsi-container {
+            width: 100%;           /* penuh layar */
+            overflow: hidden;      /* biar teks ga keluar area */
+            margin-bottom: 30px;
+        }
+
         .deskripsi {
             font-size: 1.2rem;
             color: #fff;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
             white-space: nowrap;
-            overflow: hidden;
             display: inline-block;
-            position: relative;
             animation: slide 10s linear infinite;
         }
 
         @keyframes slide {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0%   { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 class="logo">VERIMARK</h1>
         <h1 class="logo">PT. RAMA TOP GLOBAL</h1>
-        <p class="deskripsi">Perusahaan penyedia sparepart terpercaya dengan kualitas terbaik.</p>
+        <div class="deskripsi-container">
+            <p class="deskripsi">Perusahaan penyedia sparepart terpercaya dengan kualitas terbaik.</p>
+        </div>
         <div class="menu">
             <a href="kategori.html" class="btn">KATEGORI</a>
             <a href="upload.html" class="btn">BALIKAN SPAREPART</a>
@@ -97,6 +102,7 @@
     </header>
 </body>
 </html>
+
 
 
 
