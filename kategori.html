@@ -11,153 +11,137 @@
 
     <style>
         /* === GLOBAL STYLE === */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: url('bgweb.png') no-repeat center center fixed;
-            background-size: cover;
-            padding: 20px;
-            text-align: center;
-            color: #fff; /* default text putih */
-        }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('bgweb.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* default text putih */
+}
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
 
-        #searchBox {
-            padding: 10px;
-            width: 90%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
+#searchBox {
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
 
-        /* === WRAPPER MAIN BOX === */
-        .main-box {
-            background-color: rgba(255, 255, 255, 0.1); /* transparan */
-            padding: 30px;
-            border-radius: 15px;
-            width: 95%;
-            max-width: 800px;
-            margin: auto;
+/* === CATEGORY CARD === */
+    .category {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        background: #6a0dad; /* ungu tua */
+        color: white;
+        padding: 10px;
+        margin: 10px auto;
+        cursor: pointer;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 5px;
+        box-shadow: 0 6px #4b0082;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s;
+    }
+    .category img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .category:hover {
+        background-color: #7d27c1; /* ungu lebih terang saat hover */
+        transform: scale(1.05);
+        box-shadow: 0 8px #4b0082;
+    }
+    
+    /* === SPAREPART LIST === */
+    .spareparts {
+        max-height: 0;
+        overflow-y: auto;
+        transition: max-height 0.4s ease-out, padding 0.3s ease;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        width: 80%;
+        max-width: 400px;
+        padding: 0 10px;
+        text-align: left;
+    }
+    .spareparts.open {
+        max-height: 600px;
+        padding: 10px;
+    }
+    .spareparts li {
+        list-style: none;
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        color: #222; /* biar kontras dengan background putih */
+    }
+    .spareparts li img.spare-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    /* === BUTTON === */
+    .btn {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        padding: 15px 30px;
+        background-color: #6a0dad; /* ungu tua */
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 6px #4b0082;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #7d27c1;
+        transform: scale(1.05);
+        box-shadow: 0 8px #4b0082;
+    }
+    .btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 4px #2b4afc;
+    }
+    
+    /* === IMAGE PREVIEW === */
+    .large-image {
+        display: none;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .show-large-image {
+        display: block;
+    }
+    .show-large-image .small-image,
+    .show-large-image .spare-text {
+        display: none;
+    }
 
-            /* Double glow: merah + ungu */
-            box-shadow: 
-                0 8px 15px rgba(255, 0, 0, 0.3),
-                0 0 25px rgba(106, 13, 173, 0.6);
-        }
-
-        /* === CATEGORY CARD === */
-        .category {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            background: #6a0dad; /* ungu tua */
-            color: white;
-            padding: 10px;
-            margin: 10px auto;
-            cursor: pointer;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 5px;
-            box-shadow: 0 6px #4b0082;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .category img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .category:hover {
-            background-color: #7d27c1; /* ungu lebih terang saat hover */
-            transform: scale(1.05);
-            box-shadow: 0 8px #4b0082;
-        }
-        
-        /* === SPAREPART LIST === */
-        .spareparts {
-            max-height: 0;
-            overflow-y: auto;
-            transition: max-height 0.4s ease-out, padding 0.3s ease;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 5px;
-            width: 80%;
-            max-width: 400px;
-            padding: 0 10px;
-            text-align: left;
-        }
-        .spareparts.open {
-            max-height: 600px;
-            padding: 10px;
-        }
-        .spareparts li {
-            list-style: none;
-            padding: 5px 0;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            color: #222; /* biar kontras dengan background putih */
-        }
-        .spareparts li img.spare-img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        
-        /* === BUTTON === */
-        .btn {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            padding: 15px 30px;
-            background-color: #6a0dad; /* ungu tua */
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            box-shadow: 0 6px #4b0082;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .btn:hover {
-            background-color: #7d27c1;
-            transform: scale(1.05);
-            box-shadow: 0 8px #4b0082;
-        }
-        .btn:active {
-            transform: translateY(2px);
-            box-shadow: 0 4px #2b4afc;
-        }
-        
-        /* === IMAGE PREVIEW === */
-        .large-image {
-            display: none;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-        .show-large-image {
-            display: block;
-        }
-        .show-large-image .small-image,
-        .show-large-image .spare-text {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -749,5 +733,7 @@
     </script>
 </body>
 </html>
+
+
 
 
