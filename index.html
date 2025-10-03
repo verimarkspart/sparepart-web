@@ -19,7 +19,6 @@
 
     body {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
@@ -27,10 +26,19 @@
       background-size: cover;
     }
 
-    header {
+    /* Box utama transparan */
+    .main-box {
+      background-color: rgba(255, 255, 255, 0.1); /* efek transparan */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      max-width: 600px;
+      width: 90%;
       text-align: center;
-      margin-bottom: 50px;
-      max-width: 90%;
     }
 
     h1.logo {
@@ -40,16 +48,14 @@
       text-shadow: 0 0 15px rgba(192,132,252,0.8); /* glow ungu */
     }
 
-    /* Container deskripsi biar responsif */
     .deskripsi-container {
       width: 100%;
       overflow: hidden;
-      margin-bottom: 30px;
     }
 
     .deskripsi {
       font-size: 1.2rem;
-      color: #d1d5db; /* abu muda biar enak dibaca */
+      color: #d1d5db; /* abu muda */
       text-shadow: 0 0 5px rgba(0,0,0,0.7);
       white-space: nowrap;
       display: inline-block;
@@ -70,7 +76,7 @@
 
     .btn {
       padding: 15px 30px;
-      background-color: #6a0dad; /* ungu tua */
+      background-color: #6a0dad;
       color: #ffffff;
       text-decoration: none;
       font-size: 1.2rem;
@@ -81,7 +87,7 @@
     }
 
     .btn:hover {
-      background-color: #6d28d9; /* ungu lebih gelap */
+      background-color: #6d28d9;
       transform: scale(1.05);
       box-shadow: 0 8px #4b0082;
     }
@@ -93,7 +99,7 @@
 
     /* Responsif untuk tablet */
     @media (max-width: 768px) {
-      h1 {
+      h1.logo {
         font-size: 2rem;
       }
       .deskripsi {
@@ -107,7 +113,7 @@
 
     /* Responsif untuk HP */
     @media (max-width: 480px) {
-      h1 {
+      h1.logo {
         font-size: 1.5rem;
       }
       .deskripsi {
@@ -121,7 +127,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="main-box">
     <h1 class="logo">VERIMARK</h1>
 
     <div class="deskripsi-container">
@@ -135,19 +141,3 @@
   </header>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
