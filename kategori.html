@@ -38,16 +38,20 @@ h1, h2, h3, h4, h5, h6 {
 /* === MAIN BOX === */
 .main-box {
     background-color: rgba(255, 255, 255, 0.08); /* transparan */
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 15px;
-    width: 95%;
-    max-width: 900px;
-    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    
 
     /* DOUBLE GLOW: merah + ungu */
     box-shadow: 
         0 8px 20px rgba(255, 0, 0, 0.35),   /* glow merah */
         0 0 35px rgba(106, 13, 173, 0.6);  /* glow ungu */
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 /* Responsive HP */
@@ -770,6 +774,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
