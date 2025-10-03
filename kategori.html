@@ -34,36 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-        
-/* === MAIN BOX === */
-.main-box {
-    background-color: rgba(255, 255, 255, 0.08); /* transparan */
-    padding: 30px;
-    border-radius: 15px;
-    width: 90%; 
-    max-width: 800px;
-    margin: 20px auto;
 
-    /* DOUBLE GLOW: merah + ungu */
-    box-shadow: 
-        0 8px 20px rgba(255, 0, 0, 0.35),   /* glow merah */
-        0 0 35px rgba(106, 13, 173, 0.6);  /* glow ungu */
-}
-/* Responsive khusus HP */
-@media (max-width: 600px) {
-    .main-box {
-        padding: 15px;
-        width: 95%;        /* lebih melebar di layar kecil */
-        margin: 10px auto;
-    }
-
-/* Responsive layar besar (monitor gede) */
-@media (min-width: 1400px) {
-    .main-box {
-        max-width: 1200px; /* biar nggak keliatan kekecilan */
-        padding: 40px;
-    }
-    
 /* === CATEGORY CARD === */
     .category {
         font-family: 'Montserrat', sans-serif;
@@ -174,7 +145,6 @@ h1, h2, h3, h4, h5, h6 {
     </style>
 </head>
 <body>
-    <div class="main-box">
     <h1>KATEGORI PRODUK</h1>
 
     <input type="text" id="searchBox" placeholder="Cari sparepart...">
@@ -761,14 +731,8 @@ h1, h2, h3, h4, h5, h6 {
             });
         });
     </script>
-    </div>
 </body>
 </html>
-
-
-
-
-
 
 
 
