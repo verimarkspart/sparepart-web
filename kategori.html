@@ -202,19 +202,19 @@ h1, h2, h3, h4, h5, h6 {
         transform: translate(50%,-50%);
     }
     #cart-sidebar {
-        position: fixed;
-        top: 0;
-        right: -400px;
-        width: 350px;
-        height: 100%;
-        background: rgba(106, 13, 173, 0.92);
-        box-shadow: -4px 0 15px rgba(0,0,0,0.4);
-        transition: right 0.4s ease;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        z-index: 999;
-        backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(106,13,173,0.95) 0%, rgba(60,0,100,0.95) 100%);
+      box-shadow: -4px 0 25px rgba(0,0,0,0.4);
+      transition: right 0.4s ease;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      backdrop-filter: blur(10px);
     }
     #cart-sidebar.open { right: 0; }
     #cart-items { flex: 1; overflow-y: auto; text-align: left; padding: 15px; }
@@ -2512,4 +2512,5 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
