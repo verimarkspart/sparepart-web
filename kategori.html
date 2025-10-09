@@ -2470,10 +2470,49 @@ h1, h2, h3, h4, h5, h6 {
                 }
             });
         });
+
+    function flyToCart(btn) {
+      const cartIcon = document.getElementById("cart-icon");
+      const productImg = btn.parentElement.querySelector(".spare-img");
+      
+      if (!productImg) return;
+    
+      // clone gambar
+      const imgClone = productImg.cloneNode(true);
+      const imgRect = productImg.getBoundingClientRect();
+      const cartRect = cartIcon.getBoundingClientRect();
+    
+      // gaya awal clone
+      imgClone.style.position = "fixed";
+      imgClone.style.left = imgRect.left + "px";
+      imgClone.style.top = imgRect.top + "px";
+      imgClone.style.width = "40px";
+      imgClone.style.height = "40px";
+      imgClone.style.borderRadius = "8px";
+      imgClone.style.transition = "all 0.8s ease-in-out";
+      imgClone.style.zIndex = "2000";
+    
+      document.body.appendChild(imgClone);
+    
+      // trigger animasi ke posisi keranjang
+      setTimeout(() => {
+        imgClone.style.left = cartRect.left + cartRect.width / 2 + "px";
+        imgClone.style.top = cartRect.top + "px";
+        imgClone.style.width = "10px";
+        imgClone.style.height = "10px";
+        imgClone.style.opacity = "0.3";
+      }, 10);
+    
+      // hapus clone setelah animasi
+      setTimeout(() => {
+        imgClone.remove();
+      }, 900);
+    }
     </script>
     </div>
 </body>
 </html>
+
 
 
 
