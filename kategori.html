@@ -271,6 +271,16 @@ h1, h2, h3, h4, h5, h6 {
       animation: cartShake 0.4s ease;
     }
 
+    #print-btn {
+      background-color: #444;
+      color: white;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+    #print-btn:hover {
+      background-color: #666;
+      transform: scale(1.05);
+    }
     </style>
 </head>
 <body>
@@ -279,6 +289,7 @@ h1, h2, h3, h4, h5, h6 {
     <h2 style="text-align:center; margin-top:20px;">CART</h2>
     <div id="cart-items"></div>
     <button id="checkout-btn">Checkout via WhatsApp</button>
+    <button id="checkout-btn" class="btn">Checkout via WhatsApp</button>
     </div>
     <div class="main-box">
     <h1>VERIMARK</h1>
@@ -2513,10 +2524,56 @@ h1, h2, h3, h4, h5, h6 {
         setTimeout(() => cartIcon.classList.remove("cart-shake"), 400);
       }, 900);
     }
+
+    document.getElementById("print-btn").addEventListener("click", function() {
+      let cartItems = document.getElementById("cart-items").innerHTML;
+      
+      // bikin tampilan print
+      let printWindow = window.open('', '', 'width=800,height=600');
+      printWindow.document.write(`
+        <html>
+        <head>
+          <title>Print Sparepart Verimark</title>
+          <style>
+            body {
+              font-family: 'Montserrat', sans-serif;
+              color: #333;
+              padding: 20px;
+            }
+            h2 {
+              color: #6a0dad;
+              text-align: center;
+            }
+            .item {
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #ddd;
+              padding: 6px 0;
+            }
+            .footer {
+              text-align: center;
+              margin-top: 20px;
+              font-size: 12px;
+              color: #888;
+            }
+          </style>
+        </head>
+        <body>
+          <h2>Daftar Sparepart Order</h2>
+          <div>${cartItems}</div>
+          <div class="footer">Dicetak dari sistem internal Verimark</div>
+          <script>window.print();<\/script>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+    });
+        
     </script>
     </div>
 </body>
 </html>
+
 
 
 
