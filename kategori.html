@@ -1,143 +1,188 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRM KP - Kategori + Keranjang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: url('bgweb.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 { font-weight: 700; }
-    .main-box {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 20px 30px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 1000px;
-      margin: 20px auto;
-      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.35), 0 0 35px rgba(106, 13, 173, 0.6);
-    }
-    .category {
-      background: #6a0dad;
-      color: white;
-      padding: 10px;
-      margin: 10px auto;
-      cursor: pointer;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 5px;
-      box-shadow: 0 6px #4b0082;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .category:hover { background-color: #7d27c1; transform: scale(1.05); }
-    .spareparts { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-    .spareparts.open { max-height: 600px; }
-    .spareparts li {
-      list-style: none;
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #222;
-      background: rgba(255,255,255,0.8);
-      border-radius: 5px;
-      margin: 5px;
-      padding: 8px;
-    }
-    .btn-add {
-      background: #6a0dad;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .btn-add:hover { background: #7d27c1; transform: scale(1.05); }
+    <link rel="icon" type="image/png" href="VRM.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>VRM KP</title>
+    
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    /* === Keranjang === */
-    #cart-icon {
-      position: fixed;
-      top: 20px;
-      right: 30px;
-      background: rgba(106,13,173,0.9);
-      padding: 10px 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(106,13,173,0.7);
-      cursor: pointer;
-      z-index: 1000;
+    <style>
+        /* === GLOBAL STYLE === */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('bgweb.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* default text putih */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+        
+/* === MAIN BOX === */
+.main-box {
+    background-color: rgba(255, 255, 255, 0.08); /* transparan */
+    padding: 20px 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    
+
+    /* DOUBLE GLOW: merah + ungu */
+    box-shadow: 
+        0 8px 20px rgba(255, 0, 0, 0.35),   /* glow merah */
+        0 0 35px rgba(106, 13, 173, 0.6);  /* glow ungu */
+    
+}
+
+/* Responsive HP */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;   /* jarak kiri kanan */
     }
-    #cart-count {
-      background: red;
-      color: white;
-      border-radius: 50%;
-      padding: 2px 6px;
-      font-size: 12px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(50%,-50%);
+    .main-box {
+        width: 100%;       /* biar full hampir ke tepi */
+        margin: 10px auto;
+        margin: 15px 20px;
     }
-    #cart-sidebar {
-      position: fixed;
-      top: 0;
-      right: -400px;
-      width: 350px;
-      height: 100%;
-      background: rgba(106, 13, 173, 0.92);
-      box-shadow: -4px 0 15px rgba(0,0,0,0.4);
-      transition: right 0.4s ease;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      z-index: 999;
-      backdrop-filter: blur(8px);
+}
+
+/* Responsive layar besar (monitor gede) */
+@media (min-width: 1400px) {
+    .main-box {
+        max-width: 1200px; /* biar nggak keliatan kekecilan */
+        padding: 40px;
     }
-    #cart-sidebar.open { right: 0; }
-    #cart-items { flex: 1; overflow-y: auto; text-align: left; padding: 15px; }
-    .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .cart-item span { font-size: 14px; }
-    .remove-btn {
-      background: transparent;
-      border: none;
-      color: #ff8080;
-      font-size: 16px;
-      cursor: pointer;
+}        
+        
+/* === CATEGORY CARD === */
+    .category {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        background: #6a0dad; /* ungu tua */
+        color: white;
+        padding: 10px;
+        margin: 10px auto;
+        cursor: pointer;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 5px;
+        box-shadow: 0 6px #4b0082;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s;
     }
-    #checkout-btn {
-      background: #fff;
-      color: #6a0dad;
-      font-weight: bold;
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      margin: 15px;
-      cursor: pointer;
-      transition: 0.3s;
+    .category img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 5px;
     }
-    #checkout-btn:hover { background: #7d27c1; color: white; }
-  </style>
+    .category:hover {
+        background-color: #7d27c1; /* ungu lebih terang saat hover */
+        transform: scale(1.05);
+        box-shadow: 0 8px #4b0082;
+    }
+    
+    /* === SPAREPART LIST === */
+    .spareparts {
+        max-height: 0;
+        overflow-y: auto;
+        transition: max-height 0.4s ease-out, padding 0.3s ease;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        width: 80%;
+        max-width: 400px;
+        padding: 0 10px;
+        text-align: left;
+    }
+    .spareparts.open {
+        max-height: 600px;
+        padding: 10px;
+    }
+    .spareparts li {
+        list-style: none;
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        color: #222; /* biar kontras dengan background putih */
+    }
+    .spareparts li img.spare-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    /* === BUTTON === */
+    .btn {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        padding: 15px 30px;
+        background-color: #6a0dad; /* ungu tua */
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 6px #4b0082;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #7d27c1;
+        transform: scale(1.05);
+        box-shadow: 0 8px #4b0082;
+    }
+    .btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 4px #2b4afc;
+    }
+    
+    /* === IMAGE PREVIEW === */
+    .large-image {
+        display: none;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .show-large-image {
+        display: block;
+    }
+    .show-large-image .small-image,
+    .show-large-image .spare-text {
+        display: none;
+    }
+
+    </style>
 </head>
 <body>
-  <div id="cart-icon">🛒<span id="cart-count">0</span></div>
-  <div id="cart-sidebar">
-    <h2 style="text-align:center; margin-top:20px;">Keranjang</h2>
-    <div id="cart-items"></div>
-    <button id="checkout-btn">Checkout via WhatsApp</button>
-  </div>
-
-  <div class="main-box">
+    <div class="main-box">
     <h1>KATEGORI PRODUK</h1>
 
     <input type="text" id="searchBox" placeholder="Cari sparepart...">
@@ -1645,71 +1690,12 @@
         <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
         </li>
     </ul>
-    
-      <br>
+
+    <br>
     <a href="index.html" class="btn">Kembali</a>
-    
-  <script>
-    const cartIcon = document.getElementById('cart-icon');
-    const cartSidebar = document.getElementById('cart-sidebar');
-    const cartCount = document.getElementById('cart-count');
-    const cartItemsDiv = document.getElementById('cart-items');
 
-    let cart = JSON.parse(localStorage.getItem('cartData')) || [];
-    updateCartDisplay();
-
-    cartIcon.addEventListener('click', () => {
-      cartSidebar.classList.toggle('open');
-    });
-
-    function toggleSpareparts(index) {
-      const lists = document.querySelectorAll('.spareparts');
-      lists[index].classList.toggle('open');
-    }
-
-    function addToCart(item) {
-      const existing = cart.find(i => i.name === item);
-      if (existing) {
-        existing.qty++;
-      } else {
-        cart.push({ name: item, qty: 1 });
-      }
-      localStorage.setItem('cartData', JSON.stringify(cart));
-      updateCartDisplay();
-    }
-
-    function removeItem(name) {
-      cart = cart.filter(i => i.name !== name);
-      localStorage.setItem('cartData', JSON.stringify(cart));
-      updateCartDisplay();
-    }
-
-    function updateCartDisplay() {
-      cartItemsDiv.innerHTML = '';
-      let total = 0;
-      cart.forEach(i => {
-        total += i.qty;
-        const div = document.createElement('div');
-        div.classList.add('cart-item');
-        div.innerHTML = `<span>${i.name} (x${i.qty})</span><button class='remove-btn' onclick="removeItem('${i.name}')">❌</button>`;
-        cartItemsDiv.appendChild(div);
-      });
-      cartCount.textContent = total;
-    }
-
-    document.getElementById('checkout-btn').addEventListener('click', () => {
-      if (cart.length === 0) {
-        alert('Keranjang masih kosong!');
-        return;
-      }
-      let message = 'Halo, saya ingin memesan sparepart berikut:%0A';
-      cart.forEach((i, idx) => {
-        message += `${idx + 1}. ${i.name} (x${i.qty})%0A`;
-      });
-      const phone = '6285887588346'; // nomor WA tujuan
-      window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
-    });
-    function toggleSpareparts(index) {
+    <script>
+        function toggleSpareparts(index) {
             let allLists = document.querySelectorAll(".spareparts");
             let allArrows = document.querySelectorAll(".arrow");
 
@@ -1773,9 +1759,7 @@
                 }
             });
         });
-  </script>
-  </div>
+    </script>
+    </div>
 </body>
 </html>
-
-
