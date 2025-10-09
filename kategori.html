@@ -140,19 +140,1515 @@
   <div class="main-box">
     <h1>KATEGORI PRODUK</h1>
 
-    <div class="category" onclick="toggleSpareparts(0)">DR LASER EVO <span>▶</span></div>
+    <input type="text" id="searchBox" placeholder="Cari sparepart...">
+
+    <div class="category" onclick="toggleSpareparts(0)">
+        <img src="images/cervical.png" alt="DR LASER EVO">
+        DR QYU CERVICAL
+        <span class="arrow">▶</span>
+    </div>
     <ul class="spareparts">
-      <li>ZALC.A - ADAPTOR CHARGING <button class="btn-add" onclick="addToCart('ZALC.A - ADAPTOR CHARGING')">+ Keranjang</button></li>
-      <li>ZALC.BCRC - BACK CASE REMOTE <button class="btn-add" onclick="addToCart('ZALC.BCRC - BACK CASE REMOTE')">+ Keranjang</button></li>
+        <li onclick="showImage(this)">
+        <img src="images/abt.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.ABT - AIRBAG TRAY CERVICAL</span>
+        <img src="images/abt.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/apump.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.APUMP - AIRPUMP CERVICAL</span>
+        <img src="images/apump.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/bolt.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.BOLT - BOLT CERVICAL</span>
+        <img src="images/bolt.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/cc8p.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.CC8P - CONTROL CABLE 8 PIN CERVICAL</span>
+        <img src="images/cc8p.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/mpl.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.MPL - MOUNT PLATE LOW FREQUENCY CERVICAL</span>
+        <img src="images/mpl.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/np.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.NP - NECK PAD CERVICAL</span>
+        <img src="images/np.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/clist.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.CLIST - CONTROL LIST CERVICAL</span>
+        <img src="images/clist.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/clow.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.CLOW - CONTROL LOWER CASE CERVICAL</span>
+        <img src="images/clow.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/cup.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.CUP - CONTROL UPPER CASE CERVICAL</span>
+        <img src="images/cup.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/flc.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.FLC - FLASH LIGHT CASE CERVICAL</span>
+        <img src="images/flc.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/lcd.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.LCD - LCD SCREEN CERVICAL</span>
+        <img src="images/lcd.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/lctb.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.LCTB - LOWER CASE TRANSPARENT BOX CERVICAL</span>
+        <img src="images/lctb.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/pvl.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.PVL - PLASTIK VALVE CERVICAL</span>
+        <img src="images/pvl.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/rps.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.RPS - ROUND PROTECTOR SHEET CERVICAL</span>
+        <img src="images/rps.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/tpb.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.TPB - TRANSPARENT BOX CERVICAL</span>
+        <img src="images/tpb.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/dc12.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.DC12 DC - 12V CONNECTOR CERVICAL</span>
+        <img src="images/dc12.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/crb.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.CRB - CONTROL RUBBER BUTTON CERVICAL</span>
+        <img src="images/crb.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/sfm.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.SFM - SUPPORT FRAME CERVICAL</span>
+        <img src="images/sfm.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/lcov.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.LCOV - LOWER CASE CERVICAL</span>
+        <img src="images/lcov.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/ucov.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.UCOV - UPPER CASE CERVICAL</span>
+        <img src="images/ucov.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/rcb.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.RCB - REMOTE CIRCUIT BOARD CERVICAL</span>
+        <img src="images/rcb.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.GBX GIFT BOX CERVICAL</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZCTD.L1A ADAPTOR SET 1A CERVICAL</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/handle.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">DRQ - HANDLE DUS LUMBAR</span>
+        <img src="images/handle.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="images/molding.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZLMB.MLD - MOLDING</span>
+        <img src="images/molding.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
     </ul>
 
-    <div class="category" onclick="toggleSpareparts(1)">DR LASER HI PLUS <span>▶</span></div>
+    <div class="category" onclick="toggleSpareparts(1)">
+        <img src="evo.png" alt="DR LASER EVO">
+        DR LASER EVO
+        <span class="arrow">▶</span>
+    </div>
     <ul class="spareparts">
-      <li>ZDRHP.LB - LITHIUM BATTERY <button class="btn-add" onclick="addToCart('ZDRHP.LB - LITHIUM BATTERY')">+ Keranjang</button></li>
-      <li>ZDRHP.LCD - LCD DR HI PLUS <button class="btn-add" onclick="addToCart('ZDRHP.LCD - LCD DR HI PLUS')">+ Keranjang</button></li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-830IR.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.830IR - INFRARED 830Nm LIIt LED</span>
+        <img src="evo/ZALC-830IR.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-A.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.A - ADAPTOR CHARGING</span>
+        <img src="evo/ZALC-A.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BATCRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BATCRC - BATTERY COVER OF REMOTE CONTROL</span>
+        <img src="evo/ZALC-BATCRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BC - BACK CASE</span>
+        <img src="evo/ZALC-BC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BCPRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BCPRC - BATTERY CONNECTING PLATE SET OF REMOTE CONTROL</span>
+        <img src="evo/ZALC-BCPRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BCRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BCRC - BACK CASE OF REMOTE CONTROL</span>
+        <img src="evo/ZALC-BCRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BGL.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BGL - BLUE GENERATING LASER</span>
+        <img src="evo/ZALC-BGL.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BRRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BRRC - BUTTON RUBBER OF REMOTE CONTROL</span>
+        <img src="evo/ZALC-BRRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-BZ.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.BZ - BUZZER</span>
+        <img src="evo/ZALC-BZ.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-CIC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.CIC - CHARGING IC DT7115</span>
+        <img src="evo/ZALC-CIC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-FC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.FC - FRONT CASE</span>
+        <img src="evo/ZALC-FC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-FCRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.FCRC - FRONT CASE OF REMOTE</span>
+        <img src="evo/ZALC-FCRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-FSC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.FSC - FRONT STICKER COVER</span>
+        <img src="evo/ZALC-FSC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-FSCRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.FSCRC - FRONT STICKER COVER FOR REMOTE CONTROL</span>
+        <img src="evo/ZALC-FSCRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-ICA2UC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.ICA2UC - SOT IC A2UC</span>
+        <img src="evo/ZALC-ICA2UC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-LB.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.LB - LITHIUM BATTERY 2000 mAH</span>
+        <img src="evo/ZALC-LB.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-LCDRC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.LCDRC - LCD FOR REMOTE CONTROL</span>
+        <img src="evo/ZALC-LCDRC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-LH.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.LH - LASER HEATSINK</span>
+        <img src="evo/ZALC-LH.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-MIC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.MIC - MAIN IC STC451</span>
+        <img src="evo/ZALC-MIC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-NMES.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.NMES - NMES FEMALE SOCKET</span>
+        <img src="evo/ZALC-NMES.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-PI.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.PI - SMD POWER INDUCTOR 222</span>
+        <img src="evo/ZALC-PI.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-RC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.RC - REMOTE CONTROL</span>
+        <img src="evo/ZALC-RC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-RGL.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.RGL - RED GENERATING LASER</span>
+        <img src="evo/ZALC-RGL.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-SMDC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.SMDC - SMD CAPACITOR</span>
+        <img src="evo/ZALC-SMDC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-SMDDT4.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.SMDDT4 - DIODE T4</span>
+        <img src="evo/ZALC-SMDDT4.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-SMDP.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.SMDP - SMD PUSH BUTTON</span>
+        <img src="evo/ZALC-SMDP.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-SMDTY1.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.SMDTY1 - SMD TRANSISTOR Y1</span>
+        <img src="evo/ZALC-SMDTY1.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-SMDTY2.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.SMDTY2 - SMD TRANSISTOR Y2</span>
+        <img src="evo/ZALC-SMDTY2.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-TCS.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.TCS - TYPE C FEMALE SOCKET</span>
+        <img src="evo/ZALC-TCS.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="evo/ZALC-USBC.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALC.USBC - USB TYPE C CABLE</span>
+        <img src="evo/ZALC-USBC.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
     </ul>
-  </div>
 
+    <div class="category" onclick="toggleSpareparts(2)">
+        <img src="hiplus.png" alt="DR LASER EVO">
+        DR LASER HI PLUS
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CCI - CONNECTOR CHARGER INTRANASAL</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.IGL - INVISIBLE GENERATING LASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SLP10 - SLONGSONG KARET INTRANASAL PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.BC - BUTTON CASE FOR HI-PLUS</span>
+        <img src="it.pngg" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.CCMA - CHIP CENTER (MESIN UTAMA/MESIN A) DR LASER HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.CNEW - CHARGER + USB CABLE DR LASER HIPLUS NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.CUHP - CABLE USB DR LASER HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.GL - GENERATING LASER DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.ICLM - IC LM393 for HIPLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.IR - IC REGULATOR DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.LB - LITHIUM BATTERY DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.LCD - LCD DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.LPCB - LASER BOARD FOR HI-PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.NC - NOSE CABLE DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.R - RESISTANCE HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.SCHP - SOCKET CHARGER DR LASER HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.SLS - STICKY LED SCREEN (for HIPLUS)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.TDLS - TRANSPARANT LENS OF DISPLAY SCREEN OF HI-PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.TN - THE NEEDLE DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.TRQ1 - TRANSISTOR Q1 LASER for HIPLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.TRS - TRANSISTOR DR LASER HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.WB - WATCHBAND DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRHP.WC - WATCHCASE DR HI PLUS</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRL.C47UF - ELEKTROLIT CONDENSATOR 47UF</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLB - GENERATING LASER PERFECT 10+ WARNA BLUE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLY - GENERATING LASER PERFECT 10+ WARNA YELLOW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.BLT - BOLT (for HIPLUS, PF10, PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CAP - SMD CAPACITOR</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CIW - CABLE INTRANASAL WHITE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.PBS - PUSH BUTTON SMD (for HIPLUS,PF10,PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL1H - TRANSPARENT LENS 1 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL2H - TRANSPARENT LENS 2 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL4H - TRANSPARENT LENS 4 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+
+    <div class="category" onclick="toggleSpareparts(3)">
+        <img src="perfect10.png" alt="DR LASER EVO">
+        DR LASER PERFECT 10
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.BTP10 - BUTTON DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CCI - CONNECTOR CHARGER INTRANASAL</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CCP10 - CHARGER CONNECTOR DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CUP10 - CABLE USB DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.IGL - INVISIBLE GENERATING LASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.LCDP10 - LCD DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.MBP10 - MAIN BOARD (MESIN UTAMA/MESIN A) DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SCP10 - SOCKET CHARGER DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SLP10 - SLONGSONG KARET INTRANASAL PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.USBP10 - USB CABLE PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.WBP10 - WATCHBAND DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRL.C47UF - ELEKTROLIT CONDENSATOR 47UF</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLB - GENERATING LASER PERFECT 10+ WARNA BLUE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLY - GENERATING LASER PERFECT 10+ WARNA YELLOW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.BLT - BOLT (for HIPLUS, PF10, PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CAP - SMD CAPACITOR</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CIW - CABLE INTRANASAL WHITE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.PBS - PUSH BUTTON SMD (for HIPLUS,PF10,PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL1H - TRANSPARENT LENS 1 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL2H - TRANSPARENT LENS 2 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL4H - TRANSPARENT LENS 4 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+    <div class="category" onclick="toggleSpareparts(4)">
+        <img src="perfect10.png" alt="DR LASER EVO">
+        DR LASER PERFECT 10 NEW
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.BT - BUTTON DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CCI - CONNECTOR CHARGER INTRANASAL</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.CP10N - CHARGER DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.ICP10N - IC REGULATOR DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.IGL - INVISIBLE GENERATING LASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.LCDP10N - LCD DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.MBP10 - MAIN BOARD (MESIN UTAMA/MESIN A) DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SCP10N - SOCKET CHARGER DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SLP10 - SLONGSONG KARET INTRANASAL PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.TNP10 - THE NEEDLE IN WATCHBAND FOR PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.WBP10N - WATCH BAND DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRL.C47UF - ELEKTROLIT CONDENSATOR 47UF</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLB - GENERATING LASER PERFECT 10+ WARNA BLUE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLY - GENERATING LASER PERFECT 10+ WARNA YELLOW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.LB - LITHIUM BATTERY DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.LPCB - LASER BOARD FOR PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.SLB - STICKY LED FOR PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.TLDS - TRANSPARANT LENS OF DISPLAY SCREEN</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.TNP10 - THE NEEDLE PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.USB - USB CHARGING SEAT DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.WC - WATCHCASE FOR PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.BLT - BOLT (for HIPLUS, PF10, PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CAP - SMD CAPACITOR</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CIW - CABLE INTRANASAL WHITE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.PBS - PUSH BUTTON SMD (for HIPLUS,PF10,PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL1H - TRANSPARENT LENS 1 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL2H - TRANSPARENT LENS 2 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL4H - TRANSPARENT LENS 4 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+
+    <div class="category" onclick="toggleSpareparts(5)">
+        <img src="perfect10.png" alt="DR LASER EVO">
+        DR LASER PERFECT 10+ G2
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.BT - BUTTON DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.ICP10N - IC REGULATOR DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.IGL - INVISIBLE GENERATING LASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.LCDP10N - LCD DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.MBP10 - MAIN BOARD (MESIN UTAMA/MESIN A) DR LASER PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.SLP10 - SLONGSONG KARET INTRANASAL PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.TNP10 - THE NEEDLE IN WATCHBAND FOR PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDR.WBP10N - WATCH BAND DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRL.C47UF - ELEKTROLIT CONDENSATOR 47UF</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLB - GENERATING LASER PERFECT 10+ WARNA BLUE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRP10+.GLY - GENERATING LASER PERFECT 10+ WARNA YELLOW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.LB - LITHIUM BATTERY DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.LPCB - LASER BOARD FOR PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.SLB - STICKY LED FOR PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.TLDS - TRANSPARANT LENS OF DISPLAY SCREEN</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.TNP10 - THE NEEDLE PERFECT 10</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.USB - USB CHARGING SEAT DR LASER PERFECT 10 NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.BLT - BOLT (for HIPLUS, PF10, PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.CAP - SMD CAPACITOR</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.PBS - PUSH BUTTON SMD (for HIPLUS,PF10,PF10+)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL1H - TRANSPARENT LENS 1 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL2H - TRANSPARENT LENS 2 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRU.TL4H - TRANSPARENT LENS 4 HOLES</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.A - ADAPTOR FOR PERFECT 10 G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.CIWG2 - CABLE INTRANASAL WHITE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.NAA - NASAL ADAPTER AUX TO TYPE C PERFECT 10 PLUS G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.TCS - TYPE C FEMALE SOCKET FOR PERFECT 10 G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.USBC - USB CABLE C TYPE FOR PERFECT 10 G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPN.WCG2 - WATCHCASE PERFECT 10 G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+    <div class="category" onclick="toggleSpareparts(6)">
+        <img src="supreme.png" alt="DR LASER EVO">
+        DR LASER SUPREME
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.A - ADAPTOR FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.B - BUCKLE FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.BC - BUTTON CASE FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.BCB - BACK CASE BODY FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.FCB - FRONT CASE BODY FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.FFC - FLAT FLEXIBLE CABLE FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.FH - FRAME HOLDER FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.GLL - GREEN LLLT LED FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LB - LITHIUM BATTERY 1000MAH FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LCB - LASER CIRUIT BOARD FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LCD - DISPLAY LCD FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LCDDF - LCD DUSTPROOF FOAM FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LG - LASER GASKET FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.LHS - LASER HEAT SINK FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.M - MICROCHIP FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.MCB - MAIN CIRCUIT BOARD FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.NFH - NEEDLE OF FRAME HOLDER FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.PFP - PLASCTIC FILM PROTECTOR FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.RGL - RED GENERATING LASER FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.S - SPRING FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.SFS - SCREW FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.SICHUB - STABILIZER IC CHUB 3V3 SOT23 FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.SLBS - STICKY LED BACK SCREEN FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.SPB - SMD PUSH BUTTON FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.TLDS - TRANSPARENT LENS OF DISPLAY SCREEN FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.TSC - TYPE-C SOCKET CHARGER FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.USBC - USB CABLE TYPE C FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRS.WB - WATCH BAND FOR DR LASER SUPREME</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+
+    <div class="category" onclick="toggleSpareparts(7)">
+        <img src="it.png" alt="DR LASER EVO">
+        DR LASER PICO
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.BC - BUTTON CASE PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.BCI - LASER PROBE NASAL CAVITY FOR PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.BZ - BUZZER FOR PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.CIB - CABLE INTRANASAL BLACK PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.CP - CHARGER PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.ICM - MICROCHIP PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.LB - LITHIUM BATTERY PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.LCB - LASER CIRCUIT BOARD PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.LCD - DISPLAY LCD PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.MBCD - MAIN BOARD CHIP CENTER & DISPLAY PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.PB - SMD PUSH BUTTON PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.SC - MICRO USB SOCKET PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.SI - SOCKET INTRANASAL 3.5 MM FEMALE SOCKET</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.SLB - STICKY LED BACKSCREEN FOR PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZDRPC.WB - WATCHBAND PICO</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+    <div class="category" onclick="toggleSpareparts(8)">
+        <img src="pico_new.png" alt="DR LASER EVO">
+        ACULASER PICO NEW
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.BCTL10 - BACK CASE WITH TRANSPARENT LENS 10 HOLES FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.DRI - DISPLAY REGULATOR IC FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.FCB - FRONT CASE BODY FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.LB - LITHIUM BATTERY FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.LCB - LASER CIRCUIT BOARD FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.LCD - LCD FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.LH - LASER HEATSINK FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.MCB - MAIN CIRCUIT BOARD FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.PCB - PUSH BUTTON CASE FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.SLED - STICKY LED BACK SCREEN FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.SMDP - SMD PUSH BUTTON FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALA.TLDS - TRANSPARENT LENS OF DISPLAY SCREEN FOR PICO NEW</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.A - ADAPTOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BGL - BLUE GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BOLT - BOLT FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BZ - MICRO BUZZER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.CIC - CHARGING IC FOR HJG65D</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.EMSS - EMS SOCKET FOR HJG65D</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.LEDB - LED BACKSCREEN FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.N - NEEDLE ACULASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.PCC - PAIN PROBE CABLE TYPE C ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.PI - POWER INDUCTOR 2.2MH FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.RGL - RED GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SI - SILICON INTRANASAL FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SIC - SOT IC FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDC - SMD CAPACITOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDD - SMD DIODE FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDT - SMD TRANSISTOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.TCS - TYPE C SOCKET FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.USBC - USB CABLE C TYPE FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.VRIC - VOLTAGE REGULATOR IC</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.WB - WATCHBAND ACULASER FOR ACULASER (NEW MODEL)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.YGL - YELLOW GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+
+    <div class="category" onclick="toggleSpareparts(9)">
+        <img src="it.png" alt="DR LASER EVO">
+        ACULASER PREMIUM
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALP.BCTL10 - BACK CASE WITH TRANSPARENT LENS 10 HOLES FOR PREMIUM</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALP.LCB - LASER CIRCUIT BOARD FOR PREMIUM</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALP.MCB - MAIN CIRCUIT BOARD FOR PREMIUM</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+    <div class="category" onclick="toggleSpareparts(10)">
+        <img src="ultimate.png" alt="DR LASER EVO">
+        ACULASER ULTIMATE G1 & G2
+        <span class="arrow">▶</span>
+    </div>
+    <ul class="spareparts">
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.BCTL14 - BACK COVER WITH TRANSPARENT LENS 14 HOLESFOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.FCB - FRONT COVER BODY FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.FCBG2 - FRONT CASE BODY FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LB - LITHIUM BATTERY FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LCB - LASER CIRCUIT BOARD FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LCBG2 - LASER CIRCUIT BOARD FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LCD - LCD FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LCDG2 - LCD FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.LH - LASER HEATSINK FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.MCB - MAIN CIRCUIT BOARD FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.MCBG2 - MAIN CIRCUIT BOARD FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.PBC - PUSH BUTTON COVER FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.PBCD2 - PUSH BUTTON CASE FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.SLED - STICKY LED BACK SCREEN FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.SMDP - SMD PUSH BUTTON FOR ULTIMATE</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.SMDPG2 - SMD PUSH BUTTON FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.TLDSG1 - TRANSPARENT LENS OF DISPLAY SCREEN FOR ULTIMATE G1</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALD.TLDSG2 - TRANSPARENT LENS OF DISPLAY SCREEN FOR ULTIMATE G2</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.A - ADAPTOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BGL - BLUE GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BOLT - BOLT FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.BZ - MICRO BUZZER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.CIC - CHARGING IC FOR HJG65D</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.EMSS - EMS SOCKET FOR HJG65D</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.LEDB - LED BACKSCREEN FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.N - NEEDLE ACULASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.PCC - PAIN PROBE CABLE TYPE C ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.PI - POWER INDUCTOR 2.2MH FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.RGL - RED GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SI - SILICON INTRANASAL FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SIC - SOT IC FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDC - SMD CAPACITOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDD - SMD DIODE FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.SMDT - SMD TRANSISTOR FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.TCS - TYPE C SOCKET FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.USBC - USB CABLE C TYPE FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.VRIC - VOLTAGE REGULATOR IC</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.WB - WATCHBAND ACULASER FOR ACULASER (NEW MODEL)</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+        <li onclick="showImage(this)">
+        <img src="it.png" alt="IMG" class="spare-img small-image"> <!-- Gambar kecil -->
+        <span class="spare-text">ZALU.YGL - YELLOW GENERATING LASER FOR ACULASER</span>
+        <img src="it.png" alt="ZALC.830IR" class="large-image"> <!-- Gambar besar -->
+        </li>
+    </ul>
+    
+      <br>
+    <a href="index.html" class="btn">Kembali</a>
+    
   <script>
     const cartIcon = document.getElementById('cart-icon');
     const cartSidebar = document.getElementById('cart-sidebar');
@@ -214,5 +1710,7 @@
       window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     });
   </script>
+  </div>
 </body>
 </html>
+
