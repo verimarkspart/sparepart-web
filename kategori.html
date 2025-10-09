@@ -2525,21 +2525,17 @@ h1, h2, h3, h4, h5, h6 {
       }, 900);
     }
 
-    document.getElementById("print-btn").addEventListener("click", function() {
-      // ambil semua item dari keranjang
+      document.getElementById("print-btn").addEventListener("click", function() {
       const items = document.querySelectorAll("#cart-items .cart-item");
     
-      // bangun tabel
       let tableRows = "";
       items.forEach((item, index) => {
         const text = item.querySelector("span").textContent.trim();
-        // misal format item: "ZCTD.ABT - AIRBAG TRAY CERVICAL (x1)"
         const parts = text.split(" - ");
         const code = parts[0] || "";
         let name = parts[1] || "";
         let qty = "1";
     
-        // ambil qty kalau format "(x1)" ada di akhir
         const qtyMatch = name.match(/\(x(\d+)\)/);
         if (qtyMatch) {
           qty = qtyMatch[1];
@@ -2556,7 +2552,11 @@ h1, h2, h3, h4, h5, h6 {
         `;
       });
     
-      // buat tampilan printout
+      // tanggal dan jam otomatis
+      const now = new Date();
+      const tanggal = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+      const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    
       const printWindow = window.open('', '', 'width=900,height=700');
       printWindow.document.write(`
         <html>
@@ -2572,7 +2572,7 @@ h1, h2, h3, h4, h5, h6 {
             .wrapper {
               border: 2px solid #6a0dad;
               border-radius: 10px;
-              padding: 20px;
+              padding: 20px 30px;
             }
             h2 {
               text-align: center;
@@ -2598,10 +2598,24 @@ h1, h2, h3, h4, h5, h6 {
               background-color: #faf8ff;
             }
             .footer {
+              text-align: left;
+              margin-top: 20px;
+              font-size: 13px;
+              color: #333;
+            }
+            .sign-section {
+              margin-top: 40px;
+              display: flex;
+              justify-content: space-around;
               text-align: center;
-              margin-top: 25px;
-              font-size: 12px;
-              color: #666;
+            }
+            .sign-box {
+              width: 30%;
+            }
+            .sign-box .line {
+              margin-top: 60px;
+              border-top: 1px solid #333;
+              width: 100%;
             }
           </style>
         </head>
@@ -2621,7 +2635,24 @@ h1, h2, h3, h4, h5, h6 {
                 ${tableRows}
               </tbody>
             </table>
-            <div class="footer">Dicetak dari sistem internal Verimark</div>
+            <div class="footer">
+              <p><strong>Tanggal cetak:</strong> ${tanggal} — <strong>Jam:</strong> ${jam}</p>
+              <p>Dicetak dari sistem internal Verimark</p>
+            </div>
+            <div class="sign-section">
+              <div class="sign-box">
+                <p><strong>Dibuat oleh</strong></p>
+                <div class="line"></div>
+              </div>
+              <div class="sign-box">
+                <p><strong>Mengetahui</strong></p>
+                <div class="line"></div>
+              </div>
+              <div class="sign-box">
+                <p><strong>Menyetujui</strong></p>
+                <div class="line"></div>
+              </div>
+            </div>
           </div>
           <script>window.print();<\/script>
         </body>
@@ -2634,6 +2665,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
