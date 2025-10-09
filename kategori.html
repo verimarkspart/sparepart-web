@@ -1709,8 +1709,73 @@
       const phone = '6285887588346'; // nomor WA tujuan
       window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     });
+    function toggleSpareparts(index) {
+            let allLists = document.querySelectorAll(".spareparts");
+            let allArrows = document.querySelectorAll(".arrow");
+
+            allLists.forEach((list, i) => {
+                if (i === index) {
+                    list.classList.toggle("open");
+                    allArrows[i].classList.toggle("rotate");
+                } else {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                }
+            });
+        }
+
+        function showImage(element) {
+            const largeImage = element.querySelector('.large-image');
+            const smallImage = element.querySelector('.small-image');
+            const spareText = element.querySelector('.spare-text');
+
+            // Cek apakah gambar besar sudah ditampilkan
+        if (largeImage.style.display === 'block') {
+            // Jika gambar besar sudah ditampilkan, sembunyikan dan tampilkan gambar kecil serta teks
+            largeImage.style.display = 'none';
+            smallImage.style.display = 'block';
+            spareText.style.display = 'block';
+        } else {
+        // Jika gambar besar belum ditampilkan, tampilkan gambar besar dan sembunyikan gambar kecil serta teks
+        largeImage.style.display = 'block';
+        smallImage.style.display = 'none';
+        spareText.style.display = 'none';
+        }
+        }
+        document.getElementById("searchBox").addEventListener("input", function() {
+            let filter = this.value.toLowerCase();
+            let allLists = document.querySelectorAll(".spareparts");
+            let allArrows = document.querySelectorAll(".arrow");
+
+            allLists.forEach((list, i) => {
+                let items = list.querySelectorAll("li");
+                let adaYangCocok = false;
+
+                items.forEach(item => {
+                    let text = item.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        item.style.display = "";
+                        adaYangCocok = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+
+                if (filter === "") {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                } else if (adaYangCocok) {
+                    list.classList.add("open");
+                    allArrows[i].classList.add("rotate");
+                } else {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                }
+            });
+        });
   </script>
   </div>
 </body>
 </html>
+
 
