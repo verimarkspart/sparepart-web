@@ -2526,10 +2526,38 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     document.getElementById("print-btn").addEventListener("click", function() {
-      let cartItems = document.getElementById("cart-items").innerHTML;
-      
-      // bikin tampilan print
-      let printWindow = window.open('', '', 'width=800,height=600');
+      // ambil semua item dari keranjang
+      const items = document.querySelectorAll("#cart-items .cart-item");
+    
+      // bangun tabel
+      let tableRows = "";
+      items.forEach((item, index) => {
+        const text = item.querySelector("span").textContent.trim();
+        // misal format item: "ZCTD.ABT - AIRBAG TRAY CERVICAL (x1)"
+        const parts = text.split(" - ");
+        const code = parts[0] || "";
+        let name = parts[1] || "";
+        let qty = "1";
+    
+        // ambil qty kalau format "(x1)" ada di akhir
+        const qtyMatch = name.match(/\(x(\d+)\)/);
+        if (qtyMatch) {
+          qty = qtyMatch[1];
+          name = name.replace(/\(x\d+\)/, "").trim();
+        }
+    
+        tableRows += `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${code}</td>
+            <td>${name}</td>
+            <td>${qty}</td>
+          </tr>
+        `;
+      });
+    
+      // buat tampilan printout
+      const printWindow = window.open('', '', 'width=900,height=700');
       printWindow.document.write(`
         <html>
         <head>
@@ -2537,31 +2565,64 @@ h1, h2, h3, h4, h5, h6 {
           <style>
             body {
               font-family: 'Montserrat', sans-serif;
-              color: #333;
+              color: #222;
+              padding: 30px;
+              background: #fff;
+            }
+            .wrapper {
+              border: 2px solid #6a0dad;
+              border-radius: 10px;
               padding: 20px;
             }
             h2 {
-              color: #6a0dad;
               text-align: center;
+              color: #6a0dad;
+              margin-bottom: 20px;
+              text-transform: uppercase;
             }
-            .item {
-              display: flex;
-              justify-content: space-between;
-              border-bottom: 1px solid #ddd;
-              padding: 6px 0;
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th, td {
+              border: 1px solid #ccc;
+              padding: 8px;
+              text-align: left;
+              font-size: 14px;
+            }
+            th {
+              background-color: #f0e6ff;
+              color: #333;
+            }
+            tr:nth-child(even) {
+              background-color: #faf8ff;
             }
             .footer {
               text-align: center;
-              margin-top: 20px;
+              margin-top: 25px;
               font-size: 12px;
-              color: #888;
+              color: #666;
             }
           </style>
         </head>
         <body>
-          <h2>Daftar Sparepart Order</h2>
-          <div>${cartItems}</div>
-          <div class="footer">Dicetak dari sistem internal Verimark</div>
+          <div class="wrapper">
+            <h2>Daftar Sparepart Order</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Kode</th>
+                  <th>Nama Sparepart</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tableRows}
+              </tbody>
+            </table>
+            <div class="footer">Dicetak dari sistem internal Verimark</div>
+          </div>
           <script>window.print();<\/script>
         </body>
         </html>
@@ -2573,6 +2634,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
