@@ -2525,7 +2525,7 @@ h1, h2, h3, h4, h5, h6 {
       }, 900);
     }
 
-      document.getElementById("print-btn").addEventListener("click", function() {
+    document.getElementById("print-btn").addEventListener("click", function() {
       const items = document.querySelectorAll("#cart-items .cart-item");
     
       let tableRows = "";
@@ -2557,6 +2557,10 @@ h1, h2, h3, h4, h5, h6 {
       const tanggal = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
       const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
     
+      // kamu bisa ubah manual data produk & SN di sini
+      const namaProduk = "DR QYU CERVICAL";
+      const nomorSN = "SN-001234567";
+    
       const printWindow = window.open('', '', 'width=900,height=700');
       printWindow.document.write(`
         <html>
@@ -2569,10 +2573,16 @@ h1, h2, h3, h4, h5, h6 {
               padding: 30px;
               background: #fff;
             }
+            .header-info {
+              margin-bottom: 10px;
+              font-size: 14px;
+              color: #333;
+            }
             .wrapper {
               border: 2px solid #6a0dad;
               border-radius: 10px;
               padding: 20px 30px;
+              margin-top: 10px;
             }
             h2 {
               text-align: center;
@@ -2620,6 +2630,11 @@ h1, h2, h3, h4, h5, h6 {
           </style>
         </head>
         <body>
+          <div class="header-info">
+            <p><strong>Nama Produk:</strong> ${namaProduk}</p>
+            <p><strong>Nomor SN:</strong> ${nomorSN}</p>
+          </div>
+    
           <div class="wrapper">
             <h2>Daftar Sparepart Order</h2>
             <table>
@@ -2654,6 +2669,7 @@ h1, h2, h3, h4, h5, h6 {
               </div>
             </div>
           </div>
+    
           <script>window.print();<\/script>
         </body>
         </html>
@@ -2665,6 +2681,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
