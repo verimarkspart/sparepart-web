@@ -2525,146 +2525,149 @@ h1, h2, h3, h4, h5, h6 {
       }, 900);
     }
 
-      document.getElementById("print-btn").addEventListener("click", function() {
-      const items = document.querySelectorAll("#cart-items .cart-item");
-    
-      let tableRows = "";
-      items.forEach((item, index) => {
-        const text = item.querySelector("span").textContent.trim();
-        const parts = text.split(" - ");
-        const code = parts[0] || "";
-        let name = parts[1] || "";
-        let qty = "1";
-    
-        const qtyMatch = name.match(/\(x(\d+)\)/);
-        if (qtyMatch) {
-          qty = qtyMatch[1];
-          name = name.replace(/\(x\d+\)/, "").trim();
-        }
-    
-        tableRows += `
-          <tr>
-            <td>${index + 1}</td>
-            <td>${code}</td>
-            <td>${name}</td>
-            <td>${qty}</td>
-          </tr>
-        `;
-      });
-    
-      // tanggal dan jam otomatis
-      const now = new Date();
-      const tanggal = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
-      const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    
-      const printWindow = window.open('', '', 'width=900,height=700');
-      printWindow.document.write(`
-        <html>
-        <head>
-          <title>Print Sparepart Verimark</title>
-          <style>
-            body {
-              font-family: 'Montserrat', sans-serif;
-              color: #222;
-              padding: 30px;
-              background: #fff;
-            }
-            .wrapper {
-              border: 2px solid #6a0dad;
-              border-radius: 10px;
-              padding: 20px 30px;
-            }
-            h2 {
-              text-align: center;
-              color: #6a0dad;
-              margin-bottom: 20px;
-              text-transform: uppercase;
-            }
-            table {
-              width: 100%;
-              border-collapse: collapse;
-            }
-            th, td {
-              border: 1px solid #ccc;
-              padding: 8px;
-              text-align: left;
-              font-size: 14px;
-            }
-            th {
-              background-color: #f0e6ff;
-              color: #333;
-            }
-            tr:nth-child(even) {
-              background-color: #faf8ff;
-            }
-            .footer {
-              text-align: left;
-              margin-top: 20px;
-              font-size: 13px;
-              color: #333;
-            }
-            .sign-section {
-              margin-top: 40px;
-              display: flex;
-              justify-content: space-around;
-              text-align: center;
-            }
-            .sign-box {
-              width: 30%;
-            }
-            .sign-box .line {
-              margin-top: 60px;
-              border-top: 1px solid #333;
-              width: 100%;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="wrapper">
-            <h2>Daftar Sparepart Order</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Kode</th>
-                  <th>Nama Sparepart</th>
-                  <th>Qty</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${tableRows}
-              </tbody>
-            </table>
-            <div class="footer">
-              <p><strong>Tanggal cetak:</strong> ${tanggal} — <strong>Jam:</strong> ${jam}</p>
-              <p>Dicetak dari sistem internal Verimark</p>
-            </div>
-            <div class="sign-section">
-              <div class="sign-box">
-                <p><strong>Dibuat oleh</strong></p>
-                <div class="line"></div>
-              </div>
-              <div class="sign-box">
-                <p><strong>Mengetahui</strong></p>
-                <div class="line"></div>
-              </div>
-              <div class="sign-box">
-                <p><strong>Menyetujui</strong></p>
-                <div class="line"></div>
-              </div>
-            </div>
-          </div>
-          <script>window.print();<\/script>
-        </body>
-        </html>
-      `);
-      printWindow.document.close();
-    });
+      /* === CART DATA === */
+let cart = [];
+
+/* === TOGGLE SIDEBAR === */
+document.getElementById("cart-icon").addEventListener("click", () => {
+  document.getElementById("cart-sidebar").classList.toggle("open");
+});
+
+/* === ADD TO CART === */
+function addToCart(item) {
+  const existing = cart.find(i => i.name === item);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name: item, qty: 1 });
+  }
+  updateCart();
+}
+
+/* === UPDATE CART DISPLAY === */
+function updateCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartCount = document.getElementById("cart-count");
+  cartItems.innerHTML = "";
+  cart.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+    div.innerHTML = `
+      <span>${index + 1}. ${item.name}</span>
+      <span>x${item.qty}</span>
+      <button class="remove-btn" onclick="removeItem(${index})">✖</button>
+    `;
+    cartItems.appendChild(div);
+  });
+  cartCount.textContent = cart.length;
+}
+
+/* === REMOVE ITEM === */
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+/* === PRINT FUNCTION === */
+document.getElementById("print-btn").addEventListener("click", printCart);
+
+function printCart() {
+  if (cart.length === 0) {
+    alert("Cart masih kosong!");
+    return;
+  }
+
+  const productName = document.getElementById("productName").value || "-";
+  const serialNumber = document.getElementById("serialNumber").value || "-";
+  
+  let printWindow = window.open("", "_blank");
+  let tanggal = new Date();
+  let tglCetak = tanggal.toLocaleDateString('id-ID', {
+    day: '2-digit', month: 'long', year: 'numeric'
+  });
+  let jamCetak = tanggal.toLocaleTimeString('id-ID');
+
+  let html = `
+  <html>
+  <head>
+    <title>Daftar Sparepart Order</title>
+    <style>
+      body { font-family: Arial, sans-serif; color: #333; padding: 40px; }
+      h2 { text-align: center; color: #6a0dad; margin-bottom: 5px; }
+      .info { margin: 15px 0 25px 0; font-size: 14px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+      th, td { border: 1px solid #6a0dad; padding: 8px; text-align: center; }
+      th { background: #6a0dad; color: white; }
+      .footer { margin-top: 40px; text-align: center; font-size: 14px; }
+      .footer table { width: 100%; margin-top: 20px; }
+      .footer td { text-align: center; padding: 20px; }
+    </style>
+  </head>
+  <body>
+    <h2>DAFTAR SPAREPART ORDER</h2>
+    <div class="info">
+      <b>Nama Produk :</b> ${productName}<br>
+      <b>Nomor SN :</b> ${serialNumber}
+    </div>
+
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Kode</th>
+        <th>Nama Sparepart</th>
+        <th>Qty</th>
+      </tr>
+      ${cart.map((item, i) => {
+        const kode = item.name.split(" ")[0];
+        const nama = item.name.replace(kode + " - ", "");
+        return `<tr>
+          <td>${i + 1}</td>
+          <td>${kode}</td>
+          <td>${nama}</td>
+          <td>${item.qty}</td>
+        </tr>`;
+      }).join("")}
+    </table>
+
+    <div class="footer">
+      <p>Tanggal cetak: ${tglCetak} — Jam: ${jamCetak}</p>
+      <p>Dicetak dari sistem internal Verimark</p>
+
+      <table>
+        <tr>
+          <td>Dibuat oleh<br><br>_________________</td>
+          <td>Mengetahui<br><br>_________________</td>
+          <td>Menyetujui<br><br>_________________</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  </html>`;
+
+  printWindow.document.write(html);
+  printWindow.document.close();
+  printWindow.print();
+}
+
+/* === TAMBAHAN INPUT DI CART SIDEBAR === */
+const cartSidebar = document.getElementById("cart-sidebar");
+const infoDiv = document.createElement("div");
+infoDiv.style.padding = "10px 15px";
+infoDiv.innerHTML = `
+  <label>Nama Produk:</label><br>
+  <input type="text" id="productName" placeholder="Nama produk..." 
+         style="width:100%; padding:5px; margin:5px 0 10px; border-radius:5px; border:none;">
+  <label>Nomor SN:</label><br>
+  <input type="text" id="serialNumber" placeholder="Nomor SN..." 
+         style="width:100%; padding:5px; border-radius:5px; border:none;">
+`;
+cartSidebar.insertBefore(infoDiv, document.getElementById("cart-items"));
         
     </script>
     </div>
 </body>
 </html>
+
 
 
 
