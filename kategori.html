@@ -2414,7 +2414,124 @@ h1, h2, h3, h4, h5, h6 {
         }
         
         
-        document.getElementById("print-btn").addEventListener("click", function() {
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+        if (cart.length === 0) {
+        alert('Keranjang masih kosong!');
+        return;
+        }
+        let message = 'Halo, saya ingin memesan sparepart berikut:%0A';
+        cart.forEach((i, idx) => {
+        message += `${idx + 1}. ${i.name} (x${i.qty})%0A`;
+        });
+        const phone = '6285887588346'; // nomor WA tujuan
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+});
+        function toggleSpareparts(index) {
+            let allLists = document.querySelectorAll(".spareparts");
+            let allArrows = document.querySelectorAll(".arrow");
+
+            allLists.forEach((list, i) => {
+                if (i === index) {
+                    list.classList.toggle("open");
+                    allArrows[i].classList.toggle("rotate");
+                } else {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                }
+            });
+        }
+
+        function showImage(element) {
+            const largeImage = element.querySelector('.large-image');
+            const smallImage = element.querySelector('.small-image');
+            const spareText = element.querySelector('.spare-text');
+
+            // Cek apakah gambar besar sudah ditampilkan
+        if (largeImage.style.display === 'block') {
+            // Jika gambar besar sudah ditampilkan, sembunyikan dan tampilkan gambar kecil serta teks
+            largeImage.style.display = 'none';
+            smallImage.style.display = 'block';
+            spareText.style.display = 'block';
+        } else {
+        // Jika gambar besar belum ditampilkan, tampilkan gambar besar dan sembunyikan gambar kecil serta teks
+        largeImage.style.display = 'block';
+        smallImage.style.display = 'none';
+        spareText.style.display = 'none';
+        }
+        }
+        document.getElementById("searchBox").addEventListener("input", function() {
+            let filter = this.value.toLowerCase();
+            let allLists = document.querySelectorAll(".spareparts");
+            let allArrows = document.querySelectorAll(".arrow");
+
+            allLists.forEach((list, i) => {
+                let items = list.querySelectorAll("li");
+                let adaYangCocok = false;
+
+                items.forEach(item => {
+                    let text = item.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        item.style.display = "";
+                        adaYangCocok = true;
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+
+                if (filter === "") {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                } else if (adaYangCocok) {
+                    list.classList.add("open");
+                    allArrows[i].classList.add("rotate");
+                } else {
+                    list.classList.remove("open");
+                    allArrows[i].classList.remove("rotate");
+                }
+            });
+        });
+
+    function flyToCart(btn) {
+      const cartIcon = document.getElementById("cart-icon");
+      const productImg = btn.parentElement.querySelector(".spare-img");
+      
+      if (!productImg) return;
+    
+      // clone gambar
+      const imgClone = productImg.cloneNode(true);
+      const imgRect = productImg.getBoundingClientRect();
+      const cartRect = cartIcon.getBoundingClientRect();
+    
+      // gaya awal clone
+      imgClone.style.position = "fixed";
+      imgClone.style.left = imgRect.left + "px";
+      imgClone.style.top = imgRect.top + "px";
+      imgClone.style.width = "40px";
+      imgClone.style.height = "40px";
+      imgClone.style.borderRadius = "8px";
+      imgClone.style.transition = "all 0.8s ease-in-out";
+      imgClone.style.zIndex = "2000";
+    
+      document.body.appendChild(imgClone);
+    
+       // Animasi terbang ke keranjang
+      setTimeout(() => {
+        imgClone.style.left = cartRect.left + cartRect.width / 2 + "px";
+        imgClone.style.top = cartRect.top + "px";
+        imgClone.style.width = "10px";
+        imgClone.style.height = "10px";
+        imgClone.style.opacity = "0.3";
+      }, 10);
+    
+      // Hapus clone + getar ikon setelah animasi
+      setTimeout(() => {
+        imgClone.remove();
+        cartIcon.classList.add("cart-shake");
+        setTimeout(() => cartIcon.classList.remove("cart-shake"), 400);
+      }, 900);
+    }
+
+     document.getElementById("print-btn").addEventListener("click", function() {
   const items = document.querySelectorAll("#cart-items .cart-item");
 
   // ambil nama produk & nomor SN dari input (kita tambahkan di sidebar cart)
@@ -2566,16 +2683,5 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
