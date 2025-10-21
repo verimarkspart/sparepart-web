@@ -138,7 +138,10 @@
       const user = document.getElementById("username").value.trim();
       const pass = document.getElementById("password").value.trim();
 
-      const accounts = { "admin": "verimark123", "aca": "12345" };
+      const accounts = { 
+        "admin": "hengheng", 
+        "teknisi": "cibay",
+        "popay": "popay123"};
 
       if (accounts[user] && accounts[user] === pass) {
         localStorage.setItem("isLoggedIn", "true");
