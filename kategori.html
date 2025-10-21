@@ -2664,10 +2664,23 @@ h1, h2, h3, h4, h5, h6 {
     alert("Kamu harus login dulu sebelum mengakses halaman ini!");
     window.location.href = "login.html";
   }
+
+// Cek login
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+
+  // Tombol logout
+  document.getElementById("logoutBtn").addEventListener("click", function() {
+    localStorage.removeItem("isLoggedIn");
+    alert("Kamu sudah logout 👋");
+    window.location.href = "login.html";
+  });
         
     </script>
     </div>
 </body>
 </html>
+
 
 
