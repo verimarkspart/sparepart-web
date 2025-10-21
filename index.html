@@ -21,15 +21,14 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: url('bgweb.png') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Montserrat', sans-serif;
+      background: url('bgweb.png') center center / cover no-repeat;
+      background-attachment: scroll; /* <— ini penting untuk HP */
       padding: 20px;
     }
     
-    /* ===== BOX UTAMA ===== */
+    /* Box utama transparan */
     .main-box {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.12);
       padding: 40px;
       border-radius: 15px;
       box-shadow:
@@ -41,22 +40,26 @@
       text-align: center;
       color: #fff;
       width: 100%;
-      max-width: 600px;
+      max-width: 500px; /* biar proporsional di semua layar */
     }
     
-    /* ===== TEKS ===== */
+    /* Logo / Judul */
     h1.logo {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
       text-shadow: 0 0 15px rgba(192,132,252,0.8);
+      margin-bottom: 15px;
     }
     
+    /* Deskripsi berjalan */
     .deskripsi-container {
       width: 100%;
       overflow: hidden;
     }
     
     .deskripsi {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #d1d5db;
       text-shadow: 0 0 5px rgba(0,0,0,0.7);
       white-space: nowrap;
@@ -69,13 +72,13 @@
       100% { transform: translateX(-100%); }
     }
     
-    /* ===== MENU ===== */
+    /* Tombol menu */
     .menu {
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 25px;
     }
     
     .btn {
@@ -83,7 +86,7 @@
       background-color: #6a0dad;
       color: #ffffff;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       border-radius: 10px;
       box-shadow: 0 6px #4b0082;
@@ -91,7 +94,7 @@
     }
     
     .btn:hover {
-      background-color: #6d28d9;
+      background-color: #7e22ce;
       transform: scale(1.05);
     }
     
@@ -100,41 +103,45 @@
       box-shadow: 0 4px #2b4afc;
     }
     
-    /* ===== RESPONSIVE HP ===== */
+    /* Tombol logout */
+    #logoutBtn {
+      background-color: #ef4444;
+      box-shadow: 0 6px #991b1b;
+    }
+    
+    /* Responsif tablet */
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        padding: 10px;
-      }
-    
       .main-box {
-        width: 100%;
-        padding: 25px;
-        border-radius: 12px;
+        padding: 30px;
+        max-width: 90%;
       }
-    
       h1.logo {
         font-size: 2rem;
       }
-    
       .deskripsi {
         font-size: 1rem;
       }
-    
       .btn {
         font-size: 1rem;
-        padding: 12px 20px;
+        padding: 12px 24px;
       }
     }
     
-    /* ===== LAYAR BESAR ===== */
-    @media (min-width: 1400px) {
+    /* Responsif HP kecil */
+    @media (max-width: 480px) {
       .main-box {
-        max-width: 1000px;
-        padding: 60px;
+        padding: 25px 20px;
+        max-width: 95%;
       }
       h1.logo {
-        font-size: 3.5rem;
+        font-size: 1.7rem;
+      }
+      .deskripsi {
+        font-size: 0.9rem;
+      }
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
       }
     }
   </style>
@@ -162,6 +169,7 @@
   </script>
 </body>
 </html>
+
 
 
 
