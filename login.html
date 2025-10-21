@@ -45,20 +45,21 @@ h1 {
   text-shadow: 0 0 15px rgba(192,132,252,0.8);
   margin-bottom: 15px;
 }
-
+    
 /* Deskripsi berjalan */
-.deskripsi {
-  margin-bottom: 20px;
-  color: #d1d5db;
-  white-space: nowrap;
-  display: inline-block;
-  font-size: 1rem;
-  text-shadow: 0 0 5px rgba(0,0,0,0.6);
-  animation: slide 10s linear infinite;
-  width: 100%;
-  overflow: hidden;
-}
-
+    .deskripsi-container {
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .deskripsi {
+      font-size: 1.1rem;
+      color: #d1d5db;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      white-space: nowrap;
+      display: inline-block;
+      animation: slide 10s linear infinite;
+    }
 @keyframes slide {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
