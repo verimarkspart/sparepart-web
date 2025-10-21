@@ -109,8 +109,16 @@
         <button type="submit" name="submit">Upload</button>
     </form>
     <a href="index.html" class="btn">Kembali</a>
+
+    // Cek apakah sudah login
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Kamu harus login dulu sebelum mengakses halaman ini!");
+    window.location.href = "login.html";
+  }
+    
 </body>
 </html>
+
 
 
 
