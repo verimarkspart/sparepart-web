@@ -8,13 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ===== RESET DAN DASAR ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
     }
-
+    
     body {
       display: flex;
       align-items: center;
@@ -23,57 +24,60 @@
       background: url('bgweb.png') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Montserrat', sans-serif;
+      padding: 20px;
     }
-/* Box utama transparan */
+    
+    /* ===== BOX UTAMA ===== */
     .main-box {
-      background-color: rgba(255, 255, 255, 0.1); /* efek transparan */
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 
-        0 8px 20px rgba(255, 0, 0, 0.35), /* efek transparan */
-        0 0 35px rgba(106, 13, 173, 0.6); /* glow ungu */
+      box-shadow:
+        0 8px 20px rgba(255, 0, 0, 0.35),
+        0 0 35px rgba(106, 13, 173, 0.6);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       color: #fff;
-      width: 90%;
+      width: 100%;
       max-width: 600px;
     }
-
+    
+    /* ===== TEKS ===== */
     h1.logo {
       font-size: 3rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-shadow: 0 0 15px rgba(192,132,252,0.8); /* glow ungu */
+      text-shadow: 0 0 15px rgba(192,132,252,0.8);
     }
-
+    
     .deskripsi-container {
       width: 100%;
       overflow: hidden;
     }
-
+    
     .deskripsi {
       font-size: 1.2rem;
-      color: #d1d5db; /* abu muda */
+      color: #d1d5db;
       text-shadow: 0 0 5px rgba(0,0,0,0.7);
       white-space: nowrap;
       display: inline-block;
       animation: slide 10s linear infinite;
     }
-
+    
     @keyframes slide {
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
-
+    
+    /* ===== MENU ===== */
     .menu {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
+      margin-top: 20px;
     }
-
+    
     .btn {
       padding: 15px 30px;
       background-color: #6a0dad;
@@ -85,41 +89,54 @@
       box-shadow: 0 6px #4b0082;
       transition: all 0.3s ease;
     }
-
+    
     .btn:hover {
       background-color: #6d28d9;
       transform: scale(1.05);
     }
-
+    
     .btn:active {
       transform: translateY(2px);
       box-shadow: 0 4px #2b4afc;
     }
-
-    #logoutBtn {
-      background-color: #ef4444;
-      box-shadow: 0 6px #991b1b;
-    }
-
-       /* Responsive HP */
+    
+    /* ===== RESPONSIVE HP ===== */
     @media (max-width: 768px) {
-        body {
-            padding: 0 10px;   /* jarak kiri kanan */
-        }
-        .main-box {
-            width: 100%;       /* biar full hampir ke tepi */
-            margin: 10px auto;
-            margin: 15px 20px;
-        }
+      body {
+        flex-direction: column;
+        padding: 10px;
+      }
+    
+      .main-box {
+        width: 100%;
+        padding: 25px;
+        border-radius: 12px;
+      }
+    
+      h1.logo {
+        font-size: 2rem;
+      }
+    
+      .deskripsi {
+        font-size: 1rem;
+      }
+    
+      .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+      }
     }
     
-    /* Responsive layar besar (monitor gede) */
+    /* ===== LAYAR BESAR ===== */
     @media (min-width: 1400px) {
-        .main-box {
-            max-width: 1200px; /* biar nggak keliatan kekecilan */
-            padding: 40px;
-        }
-    }     
+      .main-box {
+        max-width: 1000px;
+        padding: 60px;
+      }
+      h1.logo {
+        font-size: 3.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -145,6 +162,7 @@
   </script>
 </body>
 </html>
+
 
 
 
