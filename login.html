@@ -135,5 +135,24 @@
 
     <a href="index.html" class="back-link">← Kembali ke Beranda</a>
   </div>
+  
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // cegah reload halaman
+
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    // Contoh login sederhana (bisa kamu ubah)
+    if (user === "admin" && pass === "verimark123") {
+      localStorage.setItem("isLoggedIn", "true");
+      alert("Login berhasil! Selamat datang, " + user + " 😄");
+      window.location.href = "kategori.html"; // arahkan ke halaman produk
+    } else {
+      alert("Username atau password salah!");
+    }
+  });
+</script>
+
 </body>
 </html>
