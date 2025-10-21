@@ -137,11 +137,18 @@
   </div>
 
   <script>
-  document.getElementById("loginForm").addEventListener("submit", function(e) {
+window.onload = () => {
+  const form = document.getElementById("loginForm");
+  if (!form) {
+    alert("Form tidak ditemukan di halaman!");
+    return;
+  }
+
+  form.addEventListener("submit", function(e) {
     e.preventDefault(); // cegah reload / kirim ke server
 
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
 
     // daftar user & password (bisa kamu ubah)
     const accounts = {
@@ -157,7 +164,9 @@
       alert("Username atau password salah!");
     }
   });
+};
 </script>
+
   
 </body>
 </html>
