@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | VERIMARK</title>
+  <title>VERIMARK</title>
   <link rel="icon" type="image/png" href="VRM.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -50,33 +50,33 @@
       100% { transform: translateX(-100%); }
     }
 
-    input {
-      width: 80%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      margin: 10px 0;
-      background: rgba(255,255,255,0.15);
-      color: white;
-      font-size: 1rem;
-      outline: none;
+    .menu {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn {
+      padding: 15px 30px;
       background-color: #6a0dad;
-      color: #fff;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 10px;
       box-shadow: 0 6px #4b0082;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
+      background-color: #6d28d9;
       transform: scale(1.05);
-      background-color: #7e22ce;
+    }
+
+    #logoutBtn {
+      background-color: #ef4444;
+      box-shadow: 0 6px #991b1b;
     }
   </style>
 </head>
@@ -85,25 +85,21 @@
     <h1>VERIMARK</h1>
     <p class="deskripsi">"Di mana pun kamu berada, kematian akan menyusul, bahkan jika kamu berada di dalam menara yang kuat dan tinggi."</p>
 
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <br>
-    <button class="btn" id="loginBtn">LOGIN</button>
+    <div class="menu">
+      <a href="kategori.html" class="btn">PRODUK</a>
+      <a href="upload.html" class="btn">UPLOAD FORM SP</a>
+      <button id="logoutBtn" class="btn">LOGOUT</button>
+    </div>
   </div>
 
   <script>
-    document.getElementById("loginBtn").addEventListener("click", function() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
 
-      const accounts = { "admin": "verimark123", "aca": "12345" };
-
-      if (accounts[user] && accounts[user] === pass) {
-        localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "index.html";
-      } else {
-        alert("Username atau password salah!");
-      }
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
     });
   </script>
 </body>
