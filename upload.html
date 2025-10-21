@@ -110,14 +110,17 @@
     </form>
     <a href="index.html" class="btn">Kembali</a>
 
-    // Cek apakah sudah login
+    <script>
+  // Cek apakah sudah login
   if (localStorage.getItem("isLoggedIn") !== "true") {
     alert("Kamu harus login dulu sebelum mengakses halaman ini!");
     window.location.href = "login.html";
   }
+</script>
     
 </body>
 </html>
+
 
 
 
