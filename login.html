@@ -119,7 +119,7 @@
   <div class="login-box">
     <h2>LOGIN VERIMARK</h2>
 
-    <form action="#" method="post">
+    <form id="loginForm">
       <div class="input-group">
         <label for="username">Username</label>
         <input type="text" id="username" placeholder="Masukkan username" required>
@@ -137,17 +137,22 @@
   </div>
 
   <script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault(); // cegah reload halaman
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // cegah reload / kirim ke server
 
     const user = document.getElementById("username").value;
     const pass = document.getElementById("password").value;
 
-    // Contoh login sederhana (bisa kamu ubah)
-    if (user === "admin" && pass === "verimark123") {
+    // daftar user & password (bisa kamu ubah)
+    const accounts = {
+      "admin": "verimark123",
+      "aca": "12345"
+    };
+
+    if (accounts[user] && accounts[user] === pass) {
       localStorage.setItem("isLoggedIn", "true");
       alert("Login berhasil! Selamat datang, " + user + " 😄");
-      window.location.href = "kategori.html"; // arahkan ke halaman produk
+      window.location.href = "kategori.html";
     } else {
       alert("Username atau password salah!");
     }
