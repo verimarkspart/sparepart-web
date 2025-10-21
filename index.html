@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="icon" type="image/png" href="VRM.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VERIMARK</title>
-
-  <!-- Import Google Font -->
+  <title>Login | VERIMARK</title>
+  <link rel="icon" type="image/png" href="VRM.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
     body {
       display: flex;
       align-items: center;
@@ -24,130 +15,96 @@
       min-height: 100vh;
       background: url('bgweb.png') no-repeat center center fixed;
       background-size: cover;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    /* Box utama transparan */
     .main-box {
-      background-color: rgba(255, 255, 255, 0.1); /* efek transparan */
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 40px;
       border-radius: 15px;
       box-shadow: 
-        0 8px 20px rgba(255, 0, 0, 0.35),   /* glow merah */
-        0 0 35px rgba(106, 13, 173, 0.6);  /* glow ungu */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      max-width: 600px;
-      width: 90%;
+        0 8px 20px rgba(255, 0, 0, 0.35),
+        0 0 35px rgba(106, 13, 173, 0.6);
       text-align: center;
+      color: #fff;
+      width: 90%;
+      max-width: 600px;
     }
 
-    h1.logo {
+    h1 {
       font-size: 3rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-shadow: 0 0 15px rgba(192,132,252,0.8); /* glow ungu */
-    }
-
-    .deskripsi-container {
-      width: 100%;
-      overflow: hidden;
+      text-shadow: 0 0 15px rgba(192,132,252,0.8);
     }
 
     .deskripsi {
-      font-size: 1.2rem;
-      color: #d1d5db; /* abu muda */
-      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      margin: 20px 0;
+      color: #d1d5db;
+      overflow: hidden;
       white-space: nowrap;
       display: inline-block;
       animation: slide 10s linear infinite;
     }
 
     @keyframes slide {
-      0%   { transform: translateX(100%); }
+      0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
 
-    .menu {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+    input {
+      width: 80%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      margin: 10px 0;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 1rem;
+      outline: none;
     }
 
     .btn {
-      padding: 15px 30px;
       background-color: #6a0dad;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 10px;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
       box-shadow: 0 6px #4b0082;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background-color: #6d28d9;
       transform: scale(1.05);
-      box-shadow: 0 8px #4b0082;
-    }
-
-    .btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 4px #2b4afc;
-    }
-
-    /* Responsif untuk tablet */
-    @media (max-width: 768px) {
-      h1.logo {
-        font-size: 2rem;
-      }
-      .deskripsi {
-        font-size: 1rem;
-      }
-      .btn {
-        font-size: 1rem;
-        padding: 12px 20px;
-      }
-    }
-
-    /* Responsif untuk HP */
-    @media (max-width: 480px) {
-      h1.logo {
-        font-size: 1.5rem;
-      }
-      .deskripsi {
-        font-size: 0.9rem;
-      }
-      .btn {
-        font-size: 0.9rem;
-        padding: 10px 18px;
-      }
+      background-color: #7e22ce;
     }
   </style>
 </head>
 <body>
-  <header class="main-box">
-    <h1 class="logo">VERIMARK</h1>
+  <div class="main-box">
+    <h1>VERIMARK</h1>
+    <p class="deskripsi">"Di mana pun kamu berada, kematian akan menyusul, bahkan jika kamu berada di dalam menara yang kuat dan tinggi."</p>
 
-    <div class="deskripsi-container">
-      <p class="deskripsi">"Di mana pun kamu berada, kematian akan menyusul, bahkan jika kamu berada di dalam menara yang kuat dan tinggi."</p>
-    </div>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button class="btn" id="loginBtn">LOGIN</button>
+  </div>
 
-    <div class="menu">
-      <a href="login.html" class="btn">LOGIN</a>
-      <a href="kategori.html" class="btn">PRODUK</a>
-      <a href="upload.html" class="btn">UPLOAD FORM SP</a>
-    </div>
-  </header>
+  <script>
+    document.getElementById("loginBtn").addEventListener("click", function() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      const accounts = { "admin": "verimark123", "aca": "12345" };
+
+      if (accounts[user] && accounts[user] === pass) {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Username atau password salah!");
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
