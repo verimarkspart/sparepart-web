@@ -8,6 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* === RESET DASAR === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
     body {
       display: flex;
       align-items: center;
@@ -15,33 +23,37 @@
       min-height: 100vh;
       background: url('bgweb.png') no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Montserrat', sans-serif;
+      padding: 20px;
     }
 
+    /* === BOX LOGIN === */
     .main-box {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 
+      box-shadow:
         0 8px 20px rgba(255, 0, 0, 0.35),
         0 0 35px rgba(106, 13, 173, 0.6);
       text-align: center;
       color: #fff;
-      width: 90%;
-      max-width: 600px;
+      width: 100%;
+      max-width: 500px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-shadow: 0 0 15px rgba(192,132,252,0.8);
+      margin-bottom: 15px;
     }
 
     .deskripsi {
-      margin: 20px 0;
+      margin: 15px 0 25px;
       color: #d1d5db;
       overflow: hidden;
       white-space: nowrap;
       display: inline-block;
+      font-size: 1.1rem;
+      text-shadow: 0 0 5px rgba(0,0,0,0.6);
       animation: slide 10s linear infinite;
     }
 
@@ -50,28 +62,38 @@
       100% { transform: translateX(-100%); }
     }
 
+    /* === INPUT === */
     input {
-      width: 80%;
-      padding: 12px;
+      width: 100%;
+      padding: 14px;
       border: none;
       border-radius: 8px;
-      margin: 10px 0;
+      margin-bottom: 15px;
       background: rgba(255,255,255,0.15);
-      color: white;
+      color: #fff;
       font-size: 1rem;
       outline: none;
+      transition: background 0.3s ease;
     }
 
+    input:focus {
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 0 8px rgba(192,132,252,0.8);
+    }
+
+    /* === TOMBOL LOGIN === */
     .btn {
+      width: 100%;
       background-color: #6a0dad;
       color: #fff;
       border: none;
-      padding: 12px 30px;
+      padding: 14px;
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
+      font-size: 1rem;
       box-shadow: 0 6px #4b0082;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
@@ -79,26 +101,47 @@
       background-color: #7e22ce;
     }
 
-        /* Responsive HP */
-    @media (max-width: 768px) {
-        body {
-            padding: 0 10px;   /* jarak kiri kanan */
-        }
-        .main-box {
-            width: 100%;       /* biar full hampir ke tepi */
-            margin: 10px auto;
-            margin: 15px 20px;
-        }
+    .btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px #2b4afc;
     }
-    
-    /* Responsive layar besar (monitor gede) */
-    @media (min-width: 1400px) {
-        .main-box {
-            max-width: 1200px; /* biar nggak keliatan kekecilan */
-            padding: 40px;
-        }
-    }     
-    
+
+    /* === RESPONSIVE TABLET === */
+    @media (max-width: 768px) {
+      .main-box {
+        padding: 30px 25px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .deskripsi {
+        font-size: 1rem;
+      }
+      .btn {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* === RESPONSIVE HP KECIL === */
+    @media (max-width: 480px) {
+      .main-box {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .deskripsi {
+        font-size: 0.9rem;
+      }
+      input {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+      .btn {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -106,16 +149,15 @@
     <h1>VERIMARK</h1>
     <p class="deskripsi">"Di mana pun kamu berada, kematian akan menyusul, bahkan jika kamu berada di dalam menara yang kuat dan tinggi."</p>
 
-    <input type="text" id="username" placeholder="Username">
+    <input type="text" id="username" placeholder="Username" autocomplete="off">
     <input type="password" id="password" placeholder="Password">
-    <br>
     <button class="btn" id="loginBtn">LOGIN</button>
   </div>
 
   <script>
     document.getElementById("loginBtn").addEventListener("click", function() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
 
       const accounts = { "admin": "verimark123", "aca": "12345" };
 
