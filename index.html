@@ -43,25 +43,39 @@
       max-width: 500px; /* biar proporsional di semua layar */
     }
     
-    /* Logo / Judul */
+    /* ===== JUDUL ===== */
     h1.logo {
       font-size: 2.5rem;
       font-weight: 700;
       color: #ffffff;
       text-shadow: 0 0 15px rgba(192,132,252,0.8);
-      margin-bottom: 15px;
+      margin-bottom: 8px; /* lebih rapat ke bawah */
+      letter-spacing: 1px;
     }
-    h2.logo {
-      font-size: 1.1rem;
-      font-weight: 200;
-      color: #ffffff;
-      text-shadow: 0 0 15px rgba(192,132,252,0.8);
-      margin-bottom: 30px;
+
+    /* ===== SUBJUDUL ===== */
+    h2.sublogo {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #c084fc;
+      text-shadow: 0 0 10px rgba(192,132,252,0.7);
+      margin-bottom: 18px; /* jarak ideal ke kutipan */
     }
-    
-    @keyframes slide {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+
+    /* ===== KUTIPAN ===== */
+    .quote {
+      font-size: 1rem;
+      font-style: italic;
+      color: #e5e7eb;
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+
+    .author {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      opacity: 0.8;
+      margin-bottom: 25px;
     }
     
     /* Tombol menu */
@@ -95,12 +109,6 @@
       box-shadow: 0 4px #2b4afc;
     }
     
-    /* Tombol logout */
-    #logoutBtn {
-      background-color: #ef4444;
-      box-shadow: 0 6px #991b1b;
-    }
-    
     /* Responsif tablet */
     @media (max-width: 768px) {
       .main-box {
@@ -110,11 +118,11 @@
       h1.logo {
         font-size: 2rem;
       }
-      h2.logo {
+      h2.sublogo {
         font-size: 1rem;
       }
-      .deskripsi {
-        font-size: 1rem;
+      .quote {
+        font-size: 0.95rem;
       }
       .btn {
         font-size: 1rem;
@@ -131,10 +139,10 @@
       h1.logo {
         font-size: 1.7rem;
       }
-      h2.logo {
-        font-size: 0.9rem;
+      h2.sublogo {
+        font-size: 0.95rem;
       }
-      .deskripsi {
+      .quote {
         font-size: 0.9rem;
       }
       .btn {
@@ -146,10 +154,11 @@
 </head>
 <body>
   <div class="main-box">
-    <h1>VERIMARK</h1>
-    <h2>DIMARCO-GOGOMALL</h2>
-    <p>"Usaha sering lebih penting daripada hasilnya"</p>
-    <p>~ Arthur Ashe</p>
+    <h1 class="logo">VERIMARK</h1>
+    <h2 class="sublogo">DIMARCO-GOGOMALL</h2>
+    <p class="quote">"Usaha sering lebih penting daripada hasilnya"</p>
+    <p class="author">~ Arthur Ashe</p>
+
     <div class="menu">
       <a href="kategori.html" class="btn">PRODUK</a>
       <a href="upload.html" class="btn">UPLOAD FORM SP</a>
@@ -168,15 +177,5 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
