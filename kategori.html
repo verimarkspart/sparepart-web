@@ -70,7 +70,19 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 1200px; /* biar nggak keliatan kekecilan */
         padding: 40px;
     }
-}        
+}       
+        
+@media print {
+  .main-box {
+    box-shadow: none !important; /* hilangkan efek glow */
+    background: #fff !important; /* ubah jadi putih biar jelas */
+    color: #000 !important; /* teks hitam biar kontras */
+  }
+
+  body {
+    background: #fff !important; /* hilangkan background gambar */
+  }
+}
         
 /* === CATEGORY CARD === */
     .category {
@@ -2672,6 +2684,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
