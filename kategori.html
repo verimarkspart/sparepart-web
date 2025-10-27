@@ -73,14 +73,16 @@ h1, h2, h3, h4, h5, h6 {
 }       
         
 @media print {
-  .main-box {
-    box-shadow: none !important; /* hilangkan efek glow */
-    background: #fff !important; /* ubah jadi putih biar jelas */
-    color: #000 !important; /* teks hitam biar kontras */
+  /* Hilangkan efek warna dan shadow saat print */
+  .main-box, .container, .form-box {
+    box-shadow: none !important;
+    border-color: #000 !important; /* ubah jadi hitam */
+    color: #000 !important;
+    background: #fff !important;
   }
 
   body {
-    background: #fff !important; /* hilangkan background gambar */
+    background: #fff !important;
   }
 }
         
@@ -2684,6 +2686,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
