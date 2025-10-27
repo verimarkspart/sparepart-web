@@ -73,14 +73,35 @@ h1, h2, h3, h4, h5, h6 {
 }       
         
 @media print {
-  /* Hilangkan efek warna dan shadow saat print */
-  .main-box, .container, .form-box {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Matikan semua efek ungu */
+  * {
     box-shadow: none !important;
-    border-color: #000 !important; /* ubah jadi hitam */
+    border-color: #000 !important;
+    background: #fff !important;
     color: #000 !important;
+  }
+
+  /* Kalau masih ada garis ungu dari outline */
+  * {
+    outline: none !important;
+  }
+
+  /* Pastikan border di form utama hitam */
+  .main-box, .form-container, .form-box, .content-box {
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
     background: #fff !important;
   }
 
+  body {
+    background: #fff !important;
+  }
+}
   body {
     background: #fff !important;
   }
@@ -2686,6 +2707,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
