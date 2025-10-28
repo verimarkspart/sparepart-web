@@ -71,7 +71,12 @@ h1, h2, h3, h4, h5, h6 {
         padding: 40px;
     }
 }       
-        
+@media print {
+  body {
+    transform: scale(0.7); /* 0.9 = 90% dari ukuran asli */
+    transform-origin: top left;
+  }
+}     
 /* === CATEGORY CARD === */
     .category {
         font-family: 'Montserrat', sans-serif;
@@ -2626,7 +2631,6 @@ h1, h2, h3, h4, h5, h6 {
         </table>
         <div class="footer">
           <p><strong>Tanggal cetak:</strong> ${tanggal} — <strong>Jam:</strong> ${jam}</p>
-          <p>Dicetak dari sistem internal Verimark</p>
         </div>
             <div class="sign-box">
               <p><strong>Dibuat oleh</strong></p>
@@ -2671,6 +2675,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
+
 
 
 
