@@ -71,12 +71,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 40px;
     }
 }       
-@media print {
-  body {
-    transform: scale(0.7); /* 0.9 = 90% dari ukuran asli */
-    transform-origin: top left;
-  }
-}     
+        
 /* === CATEGORY CARD === */
     .category {
         font-family: 'Montserrat', sans-serif;
@@ -2555,13 +2550,13 @@ h1, h2, h3, h4, h5, h6 {
           font-size: 12px
         }
         .wrapper {
-          border: 2px solid #000000;
+          border: 2px solid #6a0dad;
           border-radius: 10px;
           padding: 20px 30px;
         }
         h2 {
           text-align: center;
-          color: #000000;
+          color: #6a0dad;
           margin-bottom: 10px;
           text-transform: uppercase;
         }
@@ -2602,7 +2597,7 @@ h1, h2, h3, h4, h5, h6 {
           width: 30%;
         }
         .sign-box .line {
-          margin-top: 40px;
+          margin-top: 60px;
           border-top: 1px solid #333;
           width: 100%;
         }
@@ -2631,11 +2626,22 @@ h1, h2, h3, h4, h5, h6 {
         </table>
         <div class="footer">
           <p><strong>Tanggal cetak:</strong> ${tanggal} — <strong>Jam:</strong> ${jam}</p>
+          <p>Dicetak dari sistem internal Verimark</p>
         </div>
-            <div class="sign-box">
-              <p><strong>Dibuat oleh</strong></p>
-              <div class="line"></div>
-            </div>
+        <div class="sign-section">
+          <div class="sign-box">
+            <p><strong>Dibuat oleh</strong></p>
+            <div class="line"></div>
+          </div>
+          <div class="sign-box">
+            <p><strong>Mengetahui</strong></p>
+            <div class="line"></div>
+          </div>
+          <div class="sign-box">
+            <p><strong>Menyetujui</strong></p>
+            <div class="line"></div>
+          </div>
+        </div>
       </div>
       <script>window.print();<\/script>
     </body>
@@ -2666,20 +2672,3 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
